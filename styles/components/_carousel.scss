@@ -1,0 +1,54 @@
+//Carousel Styles
+
+.carousel-inner {
+    h2 {
+      @include font($IBM-font, 500, 24px, 27px);
+      margin-left: 38px;
+    }
+  
+    h3 {
+      @include font($IBM-font, 500, 15px, 22px);
+      margin-top: 18px;
+      margin-left: 38px;
+      width: 188px;
+    }
+  
+    img {
+      width: 30%;
+      position: relative;
+      left: 63%;
+      padding-top: 2rem;
+    }
+  
+    h2,
+    span {
+      font-size: 20px;
+    }
+  
+    span {
+      color: #8150c7;
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      position: relative;
+      box-shadow: 0px 1px 4px 0px #000000;
+      background-size: 48%;
+      padding: 24px;
+      border-radius: 30px;
+    }
+  
+    .carousel-control-next-icon {
+      right: -12rem;
+      background-image: url(../assets/icon/next_icon.svg);
+    }
+  
+    .carousel-control-prev-icon {
+      left: -12rem;
+      background-image: url(../assets/icon/previous_icon.svg);
+    }
+  
+}

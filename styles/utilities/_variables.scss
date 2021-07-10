@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Basis Grotesque";
+  src: url("../fonts/Basis\ Grotesque\ Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Regular";
+  src: url("../fonts/SFProText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Medium";
+  src: url("../fonts/SFProText-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Bold";
+  src: url("../fonts/SFProText-Bold.ttf") format("truetype");
+}
+
+//font-color
+$base-font-color: #3a008c;
+$highlight-color: #ee5f40;
+$active-color: #120ef0;
+$description-font-color: #64648c;
+
+//font-family
+$IBM-font: "IBM Plex Sans", sans-serif;
+$SF-Pro-Regularfont: "SF Pro Regular";
+$SF-Pro-Boldfont: "SF Pro Bold";
+$SF-Pro-Mediumfont: "SF Pro Medium";
+
+//font-weight
+$bold : 800;
+$semi-bold : 600;
+$regular : 400;
+

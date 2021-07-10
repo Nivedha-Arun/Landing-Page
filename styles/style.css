@@ -1,0 +1,1062 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Basis Grotesque";
+  src: url("../fonts/Basis Grotesque Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Regular";
+  src: url("../fonts/SFProText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Medium";
+  src: url("../fonts/SFProText-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Bold";
+  src: url("../fonts/SFProText-Bold.ttf") format("truetype");
+}
+
+footer {
+  background-color: #f3efff;
+  height: 60vh;
+  width: 100%;
+}
+
+footer .footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+footer .footer h1 {
+  font-family: "SF Pro Bold";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  width: 78%;
+  letter-spacing: -1px;
+}
+
+@media screen and (min-width: 450px) {
+  footer .footer h1 {
+    width: 43%;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  footer .footer h1 {
+    width: 487px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer .footer h1 {
+    width: 603px;
+  }
+}
+
+footer .footer .main-buttons {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 450px) {
+  footer {
+    height: 33vh;
+    margin-top: 53px;
+  }
+  footer .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .footer .main-buttons {
+    margin: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .footer .main-buttons .btn-bgcolor {
+    margin-top: 19px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    height: 261px;
+  }
+  footer .footer {
+    margin-left: 6rem;
+  }
+  footer .footer h1 {
+    font-family: "SF Pro Bold";
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -2px;
+  }
+  footer .footer .main-buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #00000a;
+  font-size: 14px;
+}
+
+.navbar-collapse {
+  left: -3rem;
+  padding: 14px;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(226, 227, 225, 0.92);
+  z-index: 2;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-collapse {
+    left: 0rem;
+    padding: 0px;
+    width: 0;
+    position: relative;
+    background-color: initial;
+    z-index: 0;
+  }
+}
+
+.nav-bar {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "applogo menu" "buttons buttons";
+}
+
+.nav-bar .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: applogo;
+  width: 45%;
+}
+
+.nav-bar nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menu;
+}
+
+.nav-bar .nav-buttons {
+  grid-area: "buttons";
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: left;
+  padding-top: 2rem;
+}
+
+.nav-bar .nav-buttons .schedule {
+  color: #3a008c;
+  padding-top: 13px;
+}
+
+.nav-bar .nav-buttons .schedule::after {
+  content: " →";
+}
+
+.nav-bar .nav-buttons .log-in {
+  background-color: #3a008c;
+  border: none;
+  color: #fff;
+  font-family: "Basis Grotesque";
+  width: 78px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+.nav-bar .nav-buttons .log-in::after {
+  content: " →";
+}
+
+@media screen and (min-width: 450px) {
+  .nav-bar .logo {
+    width: 22%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-bar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 157px 1fr 1fr;
+        grid-template-columns: 157px 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-bar .logo {
+    width: 65%;
+  }
+  .nav-bar .nav-buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 0;
+    padding-right: 3.3rem;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .nav-bar .nav-buttons .schedule {
+    padding-top: 7px;
+  }
+  .nav-bar .nav-buttons .schedule,
+  .nav-bar .nav-buttons .log-in {
+    font-size: 14px;
+  }
+}
+
+.middle {
+  background-color: #fff;
+  -webkit-box-shadow: 2px 4px 83px #e3e3e3;
+          box-shadow: 2px 4px 83px #e3e3e3;
+  font-family: "IBM Plex Sans", sans-serif;
+  z-index: 5;
+  width: 95%;
+  height: 70vh;
+  margin: 30px auto;
+}
+
+@media screen and (min-width: 450px) {
+  .middle {
+    width: 50%;
+    margin: auto;
+    margin-top: 35px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .slider {
+    margin-left: 11rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: right;
+    margin-left: 19rem;
+    margin-top: 3rem;
+    z-index: 0;
+    height: 91vh;
+    background-image: url(../assets/sb-section-console.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: bottom;
+  }
+  .slider .left,
+  .slider .right {
+    border-bottom: 309px solid #fff;
+    border-left: 45px solid transparent;
+    border-right: 50px solid transparent;
+    -webkit-filter: drop-shadow(5px -72px 62px #e3e3e399);
+            filter: drop-shadow(5px -72px 62px #e3e3e399);
+    height: 0;
+    width: 448px;
+  }
+  .slider .left {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .slider .right {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .slider .middle {
+    width: 281px;
+    height: 366px;
+    margin: -40px 0;
+  }
+}
+
+.content-tabs {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+}
+
+.content-tabs .content-nav {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1rem;
+  -webkit-backdrop-filter: grayscale(1) blur(8px);
+          backdrop-filter: grayscale(1) blur(8px);
+}
+
+.content-tabs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  width: 98%;
+  border-bottom: 2px solid #d6d5d5;
+  padding-left: 0;
+}
+
+.content-tabs ul .nav-link .active {
+  color: #120ef0;
+  border-bottom: 2px solid;
+  opacity: 100%;
+}
+
+.content-tabs ul li {
+  padding: 9px 0px 0px 0px;
+  width: 28%;
+  list-style-type: none;
+}
+
+.content-tabs ul li a {
+  color: #191923;
+  opacity: 0.55;
+}
+
+.content-tabs ul li a.active {
+  color: #120ef0;
+  opacity: 100%;
+}
+
+.content-tabs .selected-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-tabs .selected-content .selected-image {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.content-tabs .selected-content .selected-description {
+  width: 88%;
+  padding-top: -4rem;
+  margin: 3rem;
+}
+
+.content-tabs .selected-content .selected-description .selected-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+  width: 182px;
+}
+
+.content-tabs .selected-content .selected-description .selected-subtitle {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #64648c;
+  padding-top: 15px;
+  width: 225px;
+}
+
+.content-tabs .selected-content .selected-description .pricing-text {
+  font-family: "SF Pro Medium";
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 450px) {
+  .content-tabs .content-nav {
+    width: 100%;
+  }
+  .content-tabs .selected-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .content-tabs ul li {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content-tabs {
+    margin: 1.5rem 0 0 3rem;
+    width: 67%;
+  }
+  .content-tabs ul {
+    width: 100%;
+  }
+  .content-tabs ul li {
+    padding: 9px 0px 0px 0px;
+    width: 20%;
+  }
+  .content-tabs ul li a {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #191923;
+    opacity: 0.55;
+  }
+  .content-tabs ul li a.active {
+    color: #120ef0;
+    border-bottom: 2px solid;
+    opacity: 100%;
+  }
+  .content-tabs .selected-content {
+    margin-left: -3.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content-tabs .selected-content .selected-image {
+    margin-top: 3rem;
+    width: 536px;
+  }
+  .content-tabs .selected-content .selected-description {
+    width: 32%;
+    padding-top: -4rem;
+    margin: 0rem 3rem;
+  }
+  .content-tabs .selected-content .selected-description .selected-title {
+    width: 148px;
+  }
+  .content-tabs .selected-content .selected-description .pricing-text {
+    font-family: "SF Pro Medium";
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 2rem;
+    letter-spacing: -0.6px;
+  }
+}
+
+.carousel-inner h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 27px;
+  margin-left: 38px;
+}
+
+.carousel-inner h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  margin-top: 18px;
+  margin-left: 38px;
+  width: 188px;
+}
+
+.carousel-inner img {
+  width: 30%;
+  position: relative;
+  left: 63%;
+  padding-top: 2rem;
+}
+
+.carousel-inner h2,
+.carousel-inner span {
+  font-size: 20px;
+}
+
+.carousel-inner span {
+  color: #8150c7;
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    position: relative;
+    -webkit-box-shadow: 0px 1px 4px 0px #000000;
+            box-shadow: 0px 1px 4px 0px #000000;
+    background-size: 48%;
+    padding: 24px;
+    border-radius: 30px;
+  }
+  .carousel-control-next-icon {
+    right: -12rem;
+    background-image: url(../assets/icon/next_icon.svg);
+  }
+  .carousel-control-prev-icon {
+    left: -12rem;
+    background-image: url(../assets/icon/previous_icon.svg);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a.active {
+  color: #120ef0;
+  border-bottom: 2px solid;
+  opacity: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.content-category {
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #ee5f40;
+}
+
+.content-category::before {
+  display: inline-block;
+  content: "";
+  border-top: 8px solid #ee5f40;
+  width: 39px;
+  margin-right: 12px;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+}
+
+.pricing-text {
+  font-weight: 600;
+  color: #120ef0;
+}
+
+.pricing-text::after {
+  content: "  ";
+  display: inline-block;
+  background-image: url(../assets/icon/color-arrow.svg);
+  background-size: contain;
+  -webkit-transform: rotateZ(-45deg) translateY(4px);
+          transform: rotateZ(-45deg) translateY(4px);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6px 8px;
+  margin-top: 4px;
+}
+
+.main-buttons {
+  margin-top: 2rem;
+}
+
+.main-buttons .btn-bgcolor {
+  background: linear-gradient(-107.11deg, #4300a3 0%, #6100bb 100%);
+  -webkit-box-shadow: 0px 1px 3px 0px #000430;
+          box-shadow: 0px 1px 3px 0px #000430;
+  color: #fff;
+}
+
+.main-buttons .btn-signup {
+  margin-top: 19px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.main-buttons button {
+  font-family: Basis Grotesque;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-right: 10px;
+  border: none;
+  width: 199px;
+  height: 46px;
+}
+
+.main-buttons button::after {
+  content: " ";
+  background-image: url(../assets/icon/white-arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0px 6px;
+  top: 3px;
+  left: 8px;
+}
+
+.container-main {
+  width: 100%;
+}
+
+.container-main .bg-image section {
+  position: relative;
+  margin: 3rem;
+  font-family: "Basis Grotesque";
+}
+
+.container-main .bg-image .main h1,
+.container-main .bg-image .main h3 {
+  color: #030343;
+}
+
+.container-main .bg-image .main h1,
+.container-main .bg-image .main .sub-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -1px;
+  text-align: left;
+  margin-top: 40px;
+  width: 249px;
+}
+
+.container-main .bg-image .main .title {
+  color: #ee5f40;
+}
+
+.container-main .bg-image .main .sub-title {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.container-main .bg-image .main .description {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.container-main .leading-brands h3 {
+  font-family: "Basis Grotesque";
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 88px;
+  width: 238px;
+  opacity: 0.67;
+  color: #1d0046;
+}
+
+.container-main .leading-brands .brand-icons {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.container-main .leading-brands .brand-icons img {
+  margin-right: 1.2rem;
+}
+
+.container-main .leading-brands .brand-icons .goop {
+  width: 20%;
+}
+
+.container-main .leading-brands .brand-icons .study,
+.container-main .leading-brands .brand-icons .freshworks {
+  width: 35%;
+}
+
+.container-main .deploy-strategies,
+.container-main .beyond-billing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-main .deploy-strategies {
+  margin: 4rem 2rem;
+}
+
+.container-main .beyond-billing .content-container {
+  margin: 5rem 2.5rem;
+}
+
+.container-main .beyond-billing .content-title {
+  width: 79%;
+  font-family: "SF Pro Bold";
+}
+
+.container-main .beyond-billing .content-description {
+  width: 91%;
+}
+
+.container-main .testimonials {
+  width: 95%;
+  margin: auto 0.8rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.container-main .testimonials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-main .testimonials ul li {
+  list-style-type: none;
+  font-weight: 500;
+}
+
+.container-main .testimonials ul li button {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: inherit;
+  border: none;
+  color: #000;
+}
+
+.container-main .testimonials ul li .active {
+  color: #120ef0;
+  border-bottom: 2px solid;
+}
+
+.container-main .testimonials .testimonial-content {
+  -webkit-box-shadow: 0px 2px 18px -4px #7271718c;
+          box-shadow: 0px 2px 18px -4px #7271718c;
+  border-radius: 8px;
+  padding: 3rem 1.5em;
+  margin-top: 3rem;
+}
+
+.container-main .testimonials .testimonial-content .testimonial-message h1 {
+  color: #5c07d1;
+  font-weight: 600;
+  letter-spacing: -1px;
+  width: 65%;
+}
+
+.container-main .testimonials .testimonial-content .testimonial-message h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #64648c;
+  width: 93%;
+  margin-top: 1.5rem;
+}
+
+.container-main .testimonials .testimonial-content .testimonial-message h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.container-main .testimonials .testimonial-content .testimonial-image h3 {
+  color: #5c07d1;
+  text-align: center;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+}
+
+.container-main .modern-cfo {
+  margin: 9rem 3rem;
+}
+
+.container-main .modern-cfo .title {
+  margin-bottom: 3rem;
+}
+
+.container-main .modern-cfo .title h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: -0.64px;
+}
+
+.container-main .modern-cfo .container {
+  width: 100%;
+}
+
+.container-main .modern-cfo .container h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+}
+
+.container-main .modern-cfo .container h5 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container-main .modern-cfo .container h5.pricing-text {
+  font-weight: 600;
+}
+
+.container-main .modern-cfo .container .col-sm::before {
+  content: "\f058";
+  font-family: FontAwesome;
+  position: relative;
+  top: 28px;
+  font-size: 17px;
+  left: -1.9rem;
+}
+
+.container-main .content-container {
+  font-family: "IBM Plex Sans", sans-serif;
+  width: 89%;
+}
+
+.container-main .content-container .content-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 800;
+  font-size: 33px;
+  line-height: 44px;
+  padding-top: 9px;
+  width: 264px;
+  letter-spacing: -0.64px;
+}
+
+.container-main .content-container .content-description {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #64648c;
+  margin-top: 2rem;
+  width: 261px;
+}
+
+@media screen and (min-width: 450px) {
+  .container-main {
+    width: 100%;
+  }
+  .container-main .bg-image {
+    height: 135vh;
+    background-repeat: no-repeat;
+    background-image: url(../assets/heroimage@2x.png);
+    background-position: right;
+    background-size: 92%;
+  }
+  .container-main .bg-image .main .sub-title {
+    width: 39%;
+  }
+  .container-main .bg-image .main .description {
+    width: 58%;
+  }
+  .container-main .content-container .content-description {
+    width: 74%;
+  }
+  .container-main .deploy-strategies {
+    margin: 30% 3rem 3rem;
+  }
+  .container-main .testimonials {
+    width: 85%;
+    margin: auto;
+  }
+  .container-main .modern-cfo {
+    margin: 9rem 3rem 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  a {
+    padding-right: 1.8rem;
+  }
+  .container-main .bg-image {
+    height: 139.5vh;
+    background-size: 92%;
+  }
+  .container-main .bg-image section {
+    margin: 5.3rem 6rem 0 148px;
+  }
+  .container-main .bg-image .main h1,
+  .container-main .bg-image .main .sub-title {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: -1px;
+    text-align: left;
+    margin-top: 9%;
+    width: 387px;
+  }
+  .container-main .bg-image .main .sub-title {
+    width: 460px;
+    margin-top: 0px;
+  }
+  .container-main .bg-image .main .description {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 34px;
+    width: 417px;
+  }
+  .container-main .bg-image .leading-brands .brand-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 34.6px;
+  }
+  .container-main .bg-image .leading-brands .brand-icons img {
+    margin-right: 43.11px;
+  }
+  .container-main .bg-image .leading-brands .brand-icons .goop {
+    width: 64.66px;
+  }
+  .container-main .bg-image .leading-brands .brand-icons .study {
+    width: 141.8px;
+  }
+  .container-main .bg-image .leading-brands .brand-icons .freshworks {
+    width: 129.32px;
+  }
+  .container-main .content-container {
+    margin-left: 148px;
+  }
+  .container-main .content-container .content-title {
+    font-size: 36px;
+  }
+  .container-main .deploy-strategies,
+  .container-main .beyond-billing {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container-main .deploy-strategies {
+    margin: 256px 0 172px;
+    overflow-x: clip;
+  }
+  .container-main .deploy-strategies .content-container {
+    position: absolute;
+    z-index: 1;
+    width: 28%;
+  }
+  .container-main .deploy-strategies .content-description {
+    width: 326px;
+  }
+  .container-main .beyond-billing {
+    margin: 0 0 0 159px;
+  }
+  .container-main .beyond-billing .content-container {
+    margin: 0;
+    width: 29%;
+  }
+  .container-main .beyond-billing .content-title {
+    width: 284px;
+    color: #232323;
+    font-family: "SF Pro Bold";
+    letter-spacing: -1.64px;
+  }
+  .container-main .beyond-billing .content-description {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    width: 256px;
+  }
+  .container-main .testimonials {
+    margin: 153px auto;
+  }
+  .container-main .testimonials .tab-content {
+    height: 347px;
+    width: 858px;
+    margin: auto;
+  }
+  .container-main .testimonials .testimonial-content {
+    padding: 3rem 7rem;
+    margin: 3rem auto;
+  }
+  .container-main .testimonials .testimonial-content .testimonial-message h1 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1.26;
+    width: 65%;
+  }
+  .container-main .testimonials .testimonial-content .testimonial-message h2 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    width: 523px;
+    margin-top: 1.5rem;
+  }
+  .container-main .testimonials .testimonial-content .testimonial-message h3 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 1rem;
+  }
+  .container-main .testimonials .testimonial-content .testimonial-image h3 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 1rem;
+  }
+  .container-main .modern-cfo {
+    margin: 0 164px;
+  }
+  .container-main .modern-cfo .title h1 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.64px;
+    width: 402px;
+  }
+  .container-main .modern-cfo .container .col-sm {
+    padding-right: 52px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,78 @@
+//Footer Section styles
+
+@import "../utilities/mixins";
+
+footer {
+  background-color: #f3efff;
+  height: 60vh;
+  width: 100%;
+
+  .footer {
+    flex-direction: column;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    h1 {
+      @include font($SF-Pro-Boldfont, 500, 20px, 30px);
+      width: 78%;
+      letter-spacing: -1px;
+
+      @media screen and (min-width: 450px) {
+        width: 43%;
+      }
+
+      @media only screen and (min-width: 780px) {
+        width: 487px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 603px;
+      }
+    }
+
+    .main-buttons {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (min-width: 450px) {
+  footer {
+    height: 33vh;
+    margin-top: 53px;
+
+    .footer {
+      flex-direction: row;
+
+      .main-buttons {
+        margin: auto;
+        flex-direction: row;
+
+        .btn-bgcolor {
+          margin-top: 19px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    height: 261px;
+
+    .footer {
+      margin-left: 6rem;
+
+      h1 {
+        @include font($SF-Pro-Boldfont, 500, 40px, 50px);
+        letter-spacing: -2px;
+      }
+
+      .main-buttons {
+        flex-direction: row;
+      }
+    }
+  }
+}

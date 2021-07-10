@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+    <title>Chargebee Assignment</title>
+  </head>
+
+  <body class="position-relative">
+    <div class="container-main d-flex flex-column">
+      <div class="bg-image">
+        <section>
+          <!--Responsive Nav Bar-->
+          <header class="nav-bar">
+            <img class="logo" src="assets/logo/chargebee_logo.png" alt="logo" />
+            <nav class="navbar-expand-lg navbar-light">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/product/">Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/pricing/">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/solutions/">Solutions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/customers/">Customers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/resources/">Resources</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="nav-buttons">
+              <a class="schedule" href="/scheduleDemo/">Schedule a Demo</a>
+              <button class="log-in">Log in</button>
+            </div>
+          </header>
+
+          <!--Main Section with page title, description and background image-->
+          <div class="main">
+            <h1 class="title">Subscription Billing & Revenue Operations</h1>
+            <h1 class="sub-title">For Business Designed for Growth</h1>
+            <h3 class="description">
+              Chargebee gives you the freedom to deploy the right growth
+              strategies, while automating everything else in your
+              order-to-revenue workflow.
+            </h3>
+            <div class="main-buttons">
+              <button class="btn-bgcolor">Get a Consultation</button>
+              <button class="btn-signup">Signup for Free</button>
+            </div>
+          </div>
+
+          <!--Trusted Brands section-->
+          <div class="leading-brands">
+            <h3>
+              Trusted by leading brands to process over $3Bn in recurring
+              revenue.
+            </h3>
+            <div class="brand-icons d-flex flex-row">
+              <img class="goop" src="./assets/logo/goop.png" />
+              <img class="study" src="./assets/logo/study.png" />
+              <img class="freshworks" src="./assets/logo/freshworks.png" />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!--Deploy Stratergies Section-->
+      <div class="deploy-strategies">
+        <!--Deploy Strategies Information-->
+        <div class="content-container">
+          <h5 class="content-category">DEPLOY STRATEGIES</h5>
+          <h1 class="content-title">What does this challenge make possible?</h1>
+          <h3 class="content-description">
+            A changing world requires an evolving business strategy. Chargebee
+            lets you adapt business models and deploy strategies as fast as you
+            can think of them.
+          </h3>
+        </div>
+
+        <!--Carousel Section-->
+        <div class="slider">
+          <div class="left"></div>
+          <div
+            id="carouselExampleControls"
+            class="middle carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/icon/crack-new-segments.svg"
+                  alt="New Segments"
+                  class="d-block"
+                />
+                <h2><span>Roll</span> New Pricing</h2>
+                <h3>
+                  Improve value-price fit. Iterate and launch new pricing
+                  structures without the dev effort.
+                </h3>
+                <h3 class="pricing-text">Change Pricing</h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/icon/grow-market-share.svg"
+                  alt="Market Share"
+                  class="d-block"
+                />
+                <h2><span>Grow</span> Market Share</h2>
+                <h3>
+                  Improve value-price fit. Iterate and launch new pricing
+                  structures without the dev effort.
+                </h3>
+                <h3 class="pricing-text">Change Pricing</h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/icon/rethink-revenue-models.svg"
+                  alt="Revenue Models"
+                  class="d-block"
+                />
+                <h2><span>Rethink</span> Revenue Models</h2>
+                <h3>
+                  Improve value-price fit. Iterate and launch new pricing
+                  structures without the dev effort.
+                </h3>
+                <h3 class="pricing-text">Change Pricing</h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/icon/serve-new-markets.svg"
+                  alt="New Markets"
+                  class="d-block"
+                />
+                <h2><span>Serve</span> New Markets</h2>
+                <h3>
+                  Improve value-price fit. Iterate and launch new pricing
+                  structures without the dev effort.
+                </h3>
+                <h3 class="pricing-text">Change Pricing</h3>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="right"></div>
+        </div>
+      </div>
+
+      <!--Beyond Billing Section-->
+      <div class="beyond-billing">
+        <!--Beyond Billing Information-->
+        <div class="content-container">
+          <h5 class="content-category">BEYOND BILLING</h5>
+          <h1 class="content-title">Streamline Your Entire RevOps Workflow</h1>
+          <h3 class="content-description">
+            The next big revenue opportunity need not be familiar. Chargebee
+            gives you the infrastructure to discover and turn every revenue
+            potential into a business outcome.
+          </h3>
+        </div>
+
+        <!--Tabs Section-->
+        <div class="content-tabs container-fluid">
+          <div
+            id="Scrollspy"
+            class="position-relative"
+            data-spy="scroll"
+            data-target=".content=nav"
+            data-offset="50px"
+          >
+            <nav id="content-nav" class="content-nav navbar-expand-sm">
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#SubscriptionAutomation"
+                    >Subscription Automation</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#BillingExperiment"
+                    >Billing Experiments</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Integration"
+                    >Extensible Platform</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <!--Subscription Automation Tab-->
+            <div
+              id="SubscriptionAutomation"
+              class="selected-content container-fluid"
+            >
+              <div class="selected-image">
+                <img
+                  src="./assets/subscription-automation.svg"
+                  alt="Subscription Automation"
+                />
+              </div>
+              <div class="selected-description">
+                <h2 class="selected-title">
+                  Automate the Order-to-Revenue Lifecycle
+                </h2>
+                <h2 class="selected-subtitle">
+                  Collect recurring payments and automate your subscription
+                  billing logic - from checkout to reconciliation.
+                </h2>
+                <h3 class="pricing-text">Subscription Automation</h3>
+              </div>
+            </div>
+
+            <!--Billing Experiment Tab-->
+            <div
+              id="BillingExperiment"
+              class="selected-content container-fluid"
+            >
+              <div class="selected-image">
+                <img
+                  src="./assets/billing-experiments.svg"
+                  alt="Billing Experiment"
+                />
+              </div>
+              <div class="selected-description">
+                <h2 class="selected-title">
+                  Evolve your Billing Workflow to Fit Your Business Strategy
+                </h2>
+                <h2 class="selected-subtitle">
+                  Adjust pricing structures, product bundles, acquisition flows
+                  and recovery processes to maximize revenue
+                </h2>
+                <h3 class="pricing-text">Billing Experiments</h3>
+              </div>
+            </div>
+
+            <!--Integration Tab-->
+            <div id="Integration" class="selected-content container-fluid">
+              <div class="selected-image">
+                <img src="./assets/integration.svg" alt="Integration" />
+              </div>
+              <div class="selected-description">
+                <h2 class="selected-title">
+                  Scale Your Revenue Stack for Each Stage of Growth
+                </h2>
+                <h2 class="selected-subtitle">
+                  Upgrade finance, accounting, CRM, and more on the revenue
+                  engine that scales with you.
+                </h2>
+                <h3 class="pricing-text">Extensible Platform</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Testimonials Section-->
+      <div class="testimonials">
+
+        <!--Testimonials Tab-->
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <button
+              class="nav-link active"
+              id="rethink-pricing"
+              data-bs-toggle="tab"
+              data-bs-target="#pricing"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Rethink Pricing
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              id="automate-finops"
+              data-bs-toggle="tab"
+              data-bs-target="#finops"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Automate Finops
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              id="go-global"
+              data-bs-toggle="tab"
+              data-bs-target="#global"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Go Global
+            </button>
+          </li>
+        </ul>
+
+        <!--Selected Tab Content-->
+        <div class="tab-content" id="myTabContent">
+
+          <!--Pricing Tab-->
+          <div
+            id="pricing"
+            class="container testimonial-content tab-pane fade show active"
+            role="tabpanel"
+            aria-labelledby="rethink-pricing"
+          >
+            <div class="d-flex">
+              <div class="d-flex flex-column testimonial-message">
+                <h1>Achieved 20x ROI with Chargebee</h1>
+                <h2>
+                  Chargebee has all the concepts of metered billing, flat and
+                  tiered pricing. If we deided to change the way we want to bill
+                  or the price structure, it is accounted for already.
+                </h2>
+                <h3 class="pricing-text">Read Case Study</h3>
+              </div>
+              <div class="d-flex flex-column testimonial-image">
+                <img src="./assets/testimonial/nathanfeld-drawboard.png" />
+                <h3>Nathan Field, Drawboard</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!--Finops Tab-->
+          <div
+            id="finops"
+            class="container testimonial-content tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="automate-finops"
+          >
+            <div class="d-flex">
+              <div class="d-flex flex-column testimonial-message">
+                <h1>Achieved 20x ROI with Chargebee</h1>
+                <h2>
+                  Chargebee has all the concepts of metered billing, flat and
+                  tiered pricing. If we deided to change the way we want to bill
+                  or the price structure, it is accounted for already.
+                </h2>
+                <h3 class="pricing-text">Read Case Study</h3>
+              </div>
+              <div class="d-flex flex-column testimonial-image">
+                <img src="./assets/testimonial/ayushpatel-fishburners.png" />
+                <h3>Ayush Patel, Fishburners</h3>
+              </div>
+            </div>
+          </div>
+
+          <!--Global Tab-->
+          <div
+            id="global"
+            class="container testimonial-content tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="go-global"
+          >
+            <div class="d-flex">
+              <div class="d-flex flex-column testimonial-message">
+                <h1>Achieved 20x ROI with Chargebee</h1>
+                <h2>
+                  Chargebee has all the concepts of metered billing, flat and
+                  tiered pricing. If we deided to change the way we want to bill
+                  or the price structure, it is accounted for already.
+                </h2>
+                <h3 class="pricing-text">Read Case Study</h3>
+              </div>
+              <div class="d-flex flex-column testimonial-image">
+                <img src="./assets/testimonial/valentin-huang.png" />
+                <h3>Valentine, Huang</h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--Modern Cfo Section-->
+      <div class="modern-cfo d-flex flex-column">
+
+        <div class="title">
+          <h5 class="content-category">FOR THE MODERN CFO</h5>
+          <h1>Spend less time Closing, More time Driving.</h1>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h3>GAAP Compliant RevRec</h3>
+              <h5>
+                Recognize revenue accurately with ASC-606 & IFRS-15 compliant
+                revenue reporting.
+              </h5>
+              <h5 class="pricing-text">Deferred Revenue Report</h5>
+            </div>
+            <div class="col-sm">
+              <h3>Collections & Reconciliation</h3>
+              <h5>
+                Eliminate manual reco class="nav-item"nciliation by
+                auto-matching books of accounts with the bank.
+              </h5>
+              <h5 class="pricing-text">One-touch Reconciliation</h5>
+            </div>
+            <div class="col-sm">
+              <h3>A/R & DSO Management</h3>
+              <h5>
+                Reduce DSO and plug revenue churn proactively with Smart Dunning
+                & Smarter Retries.
+              </h5>
+              <h5 class="pricing-text">Smart Dunning</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--Footer Section-->
+    <footer>
+      <div class="footer d-flex">
+        <h1>Experience the Smartest Way to Automate Recurring Payments</h1>
+        <div class="main-buttons d-flex">
+          <button class="btn-bgcolor">Schedule a Demo</button>
+          <button class="btn-signup">Signup for Free</button>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>

@@ -1,0 +1,10 @@
+//Mixin for font styles
+
+@mixin font($fontfamily, $fontweight, $fontsize, $lineheight) {
+    font-family: $fontfamily;
+    font-weight: $fontweight;
+    font-size: $fontsize;
+    @if $lineheight != 0 {
+      line-height: $lineheight;
+    }
+  }

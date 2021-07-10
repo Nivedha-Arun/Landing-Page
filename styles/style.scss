@@ -1,0 +1,561 @@
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "layout/footer";
+@import "layout/header";
+@import "components/sliderBackground";
+@import "components/scrollspy";
+@import "components/carousel";
+
+//For Mobile Devices
+
+
+//common styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 12px;
+}
+
+//Selected link styles
+a {
+  text-decoration: none;
+  color: #000;
+
+  &.active {
+    color: #120ef0;
+    border-bottom: 2px solid;
+    opacity: 100%;
+  }
+}
+
+//Default image size
+img {
+  width: 100%;
+}
+
+//Selected tab content styles
+.content-category {
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: $highlight-color;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    border-top: 8px solid $highlight-color;
+    width: 39px;
+    margin-right: 12px;
+    transform: translateY(0rem);
+  }
+}
+
+.pricing-text {
+  font-weight: $semi-bold;
+  color: $active-color;
+
+  &::after {
+    content: "  ";
+    display: inline-block;
+    background-image: url(../assets/icon/color-arrow.svg);
+    background-size: contain;
+    transform: rotateZ(-45deg) translateY(4px);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6px 8px;
+    margin-top: 4px;
+  }
+}
+
+.main-buttons {
+  margin-top: 2rem;
+
+  .btn-bgcolor {
+    background: linear-gradient(-107.11deg, #4300a3 0%, #6100bb 100%);
+    box-shadow: 0px 1px 3px 0px #000430;
+    color: #fff;
+  }
+
+  .btn-signup {
+    margin-top: 19px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+
+  button {
+    @include font(Basis Grotesque, $regular, 16px, 0);
+    border-radius: 4px;
+    margin-right: 10px;
+    border: none;
+    width: 199px;
+    height: 46px;
+
+    &::after {
+      content: " ";
+      background-image: url(../assets/icon/white-arrow.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      padding: 0px 6px;
+      top: 3px;
+      left: 8px;
+    }
+  }
+}
+
+//Parent Container
+.container-main {
+  width: 100%;
+
+  .bg-image {
+
+    //Main content and background image
+    section {
+      position: relative;
+      margin: 3rem;
+      font-family: "Basis Grotesque";
+    }
+
+    .main {
+      h1,
+      h3 {
+        color: #030343;
+      }
+
+      h1,
+      .sub-title {
+        @include font($IBM-font, $semi-bold, 32px, 44px);
+        letter-spacing: -1px;
+        text-align: left;
+        margin-top: 40px;
+        width: 249px;
+      }
+
+      .title {
+        color: $highlight-color;
+      }
+
+      .sub-title {
+        margin-top: 0px;
+        font-size: 28px;
+      }
+
+      .description {
+        @include font($IBM-font, $regular, 1.3rem, 0);
+        margin-top: 1.5rem;
+        width: 100%;
+      }
+    }
+  }
+
+  //Leading brands section
+  .leading-brands {
+    h3 {
+      @include font("Basis Grotesque", $regular, 16px, 0);
+      margin-top: 88px;
+      width: 238px;
+      opacity: 0.67;
+      color: #1d0046;
+    }
+
+    .brand-icons {
+      align-items: center;
+      margin-top: 2rem;
+
+      img {
+        margin-right: 1.2rem;
+      }
+
+      .goop {
+        width: 20%;
+      }
+
+      .study,
+      .freshworks {
+        width: 35%;
+      }
+    }
+  }
+
+  //Deploy strategies section
+  .deploy-strategies,
+  .beyond-billing {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .deploy-strategies {
+    margin: 4rem 2rem;
+  }
+
+  //Beyond Billing
+  .beyond-billing {
+    .content-container {
+      margin: 5rem 2.5rem;
+    }
+
+    .content-title {
+      width: 79%;
+      font-family: $SF-Pro-Boldfont;
+    }
+
+    .content-description {
+      width: 91%;
+    }
+  }
+
+  //Testimonials
+  .testimonials {
+    width: 95%;
+    margin: auto 0.8rem;
+    font-family: $IBM-font;
+
+    ul {
+      display: flex;
+      li {
+        list-style-type: none;
+        font-weight: 500;
+
+        button {
+          @include font($IBM-font, $semi-bold, 16px, 0);
+          background-color: inherit;
+          border: none;
+          color: #000;
+        }
+
+        .active {
+          color: $active-color;
+          border-bottom: 2px solid;
+        }
+      }
+    }
+
+    .testimonial-content {
+      box-shadow: 0px 2px 18px -4px #7271718c;
+      border-radius: 8px;
+      padding: 3rem 1.5em;
+      margin-top: 3rem;
+
+      .testimonial-message {
+        h1 {
+          color: #5c07d1;
+          font-weight: $semi-bold;
+          letter-spacing: -1px;
+          width: 65%;
+        }
+        h2 {
+          @include font($IBM-font, $regular, 1.3rem, 0);
+          color: $description-font-color;
+          width: 93%;
+          margin-top: 1.5rem;
+        }
+        h3 {
+          font-size: 1.2rem;
+          margin-top: 2rem;
+        }
+      }
+
+      .testimonial-image {
+        h3 {
+          color: #5c07d1;
+          text-align: center;
+          font-size: 1.1rem;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  //Modern-Cfo
+  .modern-cfo {
+    margin: 9rem 3rem;
+
+    .title {
+      margin-bottom: 3rem;
+
+      h1 {
+        @include font($IBM-font, $semi-bold, 36px, 0);
+        letter-spacing: -0.64px;
+      }
+    }
+
+    .container {
+      width: 100%;
+
+      h3 {
+        @include font($IBM-font, $semi-bold, 20px, 30px);
+        letter-spacing: -0.5px;
+      }
+
+      h5 {
+        @include font($IBM-font, $regular, 16px, 24px);
+
+        &.pricing-text {
+          font-weight: $semi-bold;
+        }
+      }
+
+      .col-sm::before {
+        content: "\f058";
+        font-family: FontAwesome;
+        position: relative;
+        top: 28px;
+        font-size: 17px;
+        left: -1.9rem;
+      }
+    }
+  }
+
+  .content-container {
+    font-family: $IBM-font;
+    width: 89%;
+
+    .content-title {
+      @include font($IBM-font, $bold, 33px, 44px);
+      padding-top: 9px;
+      width: 264px;
+      letter-spacing: -0.64px;
+    }
+
+    .content-description {
+      @include font($IBM-font, $regular, 16px, 24px);
+      color: $description-font-color;
+      margin-top: 2rem;
+      width: 261px;
+    }
+  }
+}
+
+
+//For Tablet Devices
+
+@media screen and (min-width: 450px) {
+  //Parent Container
+  .container-main {
+    width: 100%;
+
+    //Main content and background image
+    .bg-image {
+      height: 135vh;
+      background-repeat: no-repeat;
+      background-image: url(../assets/heroimage@2x.png);
+      background-position: right;
+      background-size: 92%;
+
+      .main {
+        .sub-title {
+          width: 39%;
+        }
+
+        .description {
+          width: 58%;
+        }
+      }
+    }
+
+    .content-container {
+      .content-description {
+        width: 74%;
+      }
+    }
+
+    //Deploy Strategies styles
+    .deploy-strategies {
+      margin: 30% 3rem 3rem;
+    }
+
+    //Testimonials styles
+    .testimonials {
+      width: 85%;
+      margin: auto;
+    }
+
+    //Modern Cfo styles
+    .modern-cfo {
+      margin: 9rem 3rem 4rem;
+    }
+  }
+}
+
+
+//For Laptop and Larger Devices
+
+@media screen and (min-width: 1024px) {
+
+  a {
+    padding-right: 1.8rem;
+  }
+
+  //Parent Container
+  .container-main {
+    .bg-image {
+      height: 139.5vh;
+      background-size: 92%;
+
+      section {
+        margin: 5.3rem 6rem 0 148px;
+      }
+
+      .main {
+        h1,
+        .sub-title {
+          @include font($IBM-font, $semi-bold, 48px, 54px);
+          letter-spacing: -1px;
+          text-align: left;
+          margin-top: 9%;
+          width: 387px;
+        }
+
+        .sub-title {
+          width: 460px;
+          margin-top: 0px;
+        }
+
+        .description {
+          @include font($IBM-font, $regular, 18px, 27px);
+          margin-top: 34px;
+          width: 417px;
+        }
+      }
+
+      .leading-brands {
+        .brand-icons {
+          display: flex;
+          align-items: center;
+          margin-top: 34.6px;
+
+          img {
+            margin-right: 43.11px;
+          }
+
+          .goop {
+            width: 64.66px;
+          }
+
+          .study {
+            width: 141.8px;
+          }
+
+          .freshworks {
+            width: 129.32px;
+          }
+        }
+      }
+    }
+
+    //Selected tab container
+    .content-container {
+      margin-left: 148px;
+
+      .content-title {
+        font-size: 36px;
+      }
+    }
+
+    //Deploy Strategy styles
+    .deploy-strategies,
+    .beyond-billing {
+      flex-direction: row;
+    }
+
+    .deploy-strategies {
+      margin: 256px 0 172px;
+      overflow-x: clip;
+
+      .content-container {
+        position: absolute;
+        z-index: 1;
+        width: 28%;
+      }
+
+      .content-description {
+        width: 326px;
+      }
+    }
+
+    //Beyond Billing styles
+    .beyond-billing {
+      margin: 0 0 0 159px;
+    }
+
+    .beyond-billing {
+      .content-container {
+        margin: 0;
+        width: 29%;
+      }
+
+      .content-title {
+        width: 284px;
+        color: #232323;
+        font-family: $SF-Pro-Boldfont;
+        letter-spacing: -1.64px;
+      }
+
+      .content-description {
+        @include font($IBM-font, $regular, 16px, 24px);
+        width: 256px;
+      }
+    }
+
+
+  //Testimonials Section styles
+  .testimonials {
+    margin: 153px auto;
+
+    .tab-content {
+      height: 347px;
+      width: 858px;
+      margin: auto;
+    }
+
+    .testimonial-content {
+      padding: 3rem 7rem;
+      margin: 3rem auto;
+
+      .testimonial-message {
+        h1 {
+          @include font($IBM-font, $bold, 32px, 1.26);
+          width: 65%;
+        }
+
+        h2 {
+          @include font($IBM-font, $regular, 18px, 1.55);
+          width: 523px;
+          margin-top: 1.5rem;
+        }
+
+        h3 {
+          @include font($IBM-font, $semi-bold, 16px, 20px);
+          padding-top: 1rem;
+        }
+      }
+
+      .testimonial-image {
+        h3 {
+          @include font($IBM-font, $semi-bold, 16px, 20px);
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  //Modern Cfo Section styles
+  .modern-cfo {
+    margin: 0 164px;
+
+    .title {
+      h1 {
+        @include font($IBM-font, $semi-bold, 36px, 44px);
+        letter-spacing: -0.64px;
+        width: 402px;
+      }
+    }
+
+    .container {
+      .col-sm {
+        padding-right: 52px;
+      }
+    }
+  }
+}
+}

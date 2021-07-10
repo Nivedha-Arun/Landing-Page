@@ -1,0 +1,62 @@
+//Slider Background Styles
+
+.middle {
+    background-color: #fff;
+    box-shadow: 2px 4px 83px #e3e3e3;
+    font-family: $IBM-font;
+    z-index: 5;
+    width: 95%;
+    height: 70vh;
+    margin: 30px auto;
+  }
+
+@media screen and (min-width: 450px) {
+    .middle {
+        width: 50%;
+        margin: auto;
+        margin-top: 35px;
+      }
+}
+
+@media screen and (min-width: 1000px) {
+    .slider {
+      margin-left: 11rem;
+    }
+  }
+
+@media screen and (min-width: 1024px) {
+
+.slider {
+    display: flex;
+    float: right;
+    margin-left: 19rem;
+    margin-top: 3rem;
+    z-index: 0;
+    height: 91vh;
+    background-image: url(../assets/sb-section-console.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: bottom;
+
+    .left,
+    .right {
+      border-bottom: 309px solid #fff;
+      border-left: 45px solid transparent;
+      border-right: 50px solid transparent;
+      filter: drop-shadow(5px -72px 62px #e3e3e399);
+      height: 0;
+      width: 448px;
+    }
+    .left {
+      transform: rotate(90deg);
+    }
+    .right {
+      transform: rotate(-90deg);
+    }
+    .middle {
+      width: 281px;
+      height: 366px;
+      margin: -40px 0;
+    }
+  }
+}
