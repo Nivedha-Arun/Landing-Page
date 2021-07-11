@@ -398,6 +398,7 @@ img {
 
         .description {
           @include font($IBM-font, $regular, 18px, 27px);
+          margin-top: 3rem;
         }
       }
 
