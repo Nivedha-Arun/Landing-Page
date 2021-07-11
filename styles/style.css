@@ -248,7 +248,7 @@ footer .footer .main-buttons {
 
 @media screen and (min-width: 900px) and (max-width: 1024px) {
   .slider {
-    margin-left: 8rem !important;
+    margin-left: 7rem !important;
   }
 }
 
@@ -442,6 +442,7 @@ footer .footer .main-buttons {
   }
   .content-tabs .selected-content .selected-image {
     margin-top: 3rem;
+    width: 179%;
   }
   .content-tabs .selected-content .selected-description {
     padding-top: -4rem;
@@ -875,7 +876,7 @@ img {
   .container-main main {
     margin-top: 3rem;
   }
-  .container-main .container-fluid {
+  .container-main section.container-fluid {
     padding: 2.5rem 0 2.5rem 2.5rem;
   }
   .container-main .bg-image {
