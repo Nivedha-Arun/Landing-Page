@@ -1,52 +1,64 @@
 //Header Section Styles
 
 .navbar-light {
-    .navbar-nav {
-      .nav-link {
+  .navbar-toggler {
+    float: right;
+  }
+  .navbar-nav {
+    .nav-link {
         color: #00000a;
         font-size: 14px;
+      
+        &:hover{
+          color: $black;
+          font-weight: 500;
+        }
       }
     }
   }
   
 .navbar-collapse {
-    left: -3rem;
+    left: 0rem;
     padding: 14px;
+    margin-top: 2.3rem;
     width: 100vw;
     position: absolute;
     background-color: rgba(226, 227, 225, 0.92);
     z-index: 2;
 
     @media screen and (min-width: 1024px) {
-            left: 0rem;
-            padding: 0px;
-            width: 0;
-            position: relative;
-            background-color: initial;
-            z-index: 0;
+        left: 0rem;
+        padding: 0px;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+        background-color: initial;
+        z-index: 0;
     }
   }
 
 .nav-bar {
     display: grid;
-    grid-template-areas:
-      "applogo menu"
-      "buttons buttons";
+    grid-template-columns: 157px 1fr;
+    justify-content: center;
+    align-items: center;
 
     .logo {
-      grid-area: applogo;
       width: 45%;
-    }
 
-    nav {
-      grid-area: menu;
+      @media screen and (min-width: 450px) {
+        width: 60%;
+      }
+
+      @media screen and (min-width: 1024px) {
+        margin-top: 2rem;
+        width: 65%;
+      }
     }
 
     .nav-buttons {
-      grid-area: "buttons";
       position: relative;
       flex-direction: column-reverse;
-      display: flex;
       place-items: left;
       padding-top: 2rem;
 
@@ -75,25 +87,8 @@
     }
   }
 
-@media screen and (min-width: 450px) {
-    .nav-bar {
-        .logo {
-          width: 22%;
-        }
-      }
-}
-
 @media screen and (min-width: 1024px) {
   .nav-bar {
-    display: grid;
-    grid-template-columns: 157px 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-
-    .logo {
-      width: 65%;
-    }
-
     .nav-buttons {
       flex-direction: row;
       padding-top: 0;

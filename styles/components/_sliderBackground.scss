@@ -1,12 +1,10 @@
 //Slider Background Styles
-
 .middle {
     background-color: #fff;
     box-shadow: 2px 4px 83px #e3e3e3;
     font-family: $IBM-font;
     z-index: 5;
     width: 95%;
-    height: 70vh;
     margin: 30px auto;
   }
 
@@ -18,9 +16,9 @@
       }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) and (max-width: 1024px) {
     .slider {
-      margin-left: 11rem;
+      margin-left: 8rem !important;
     }
   }
 
@@ -29,7 +27,7 @@
 .slider {
     display: flex;
     float: right;
-    margin-left: 19rem;
+    margin-left: 11rem;
     margin-top: 3rem;
     z-index: 0;
     height: 91vh;

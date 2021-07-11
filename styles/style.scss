@@ -8,7 +8,6 @@
 
 //For Mobile Devices
 
-
 //common styles
 * {
   box-sizing: border-box;
@@ -19,12 +18,17 @@
 //Selected link styles
 a {
   text-decoration: none;
-  color: #000;
+  color: $black;
 
   &.active {
     color: #120ef0;
     border-bottom: 2px solid;
     opacity: 100%;
+    font-size: 12px;
+  }
+
+  &:hover{
+    cursor: pointer;
   }
 }
 
@@ -52,6 +56,7 @@ img {
 .pricing-text {
   font-weight: $semi-bold;
   color: $active-color;
+  font-size: 16px;
 
   &::after {
     content: "  ";
@@ -61,8 +66,9 @@ img {
     transform: rotateZ(-45deg) translateY(4px);
     background-position: center;
     background-repeat: no-repeat;
+    top: -2px;
+    position: relative;
     padding: 6px 8px;
-    margin-top: 4px;
   }
 }
 
@@ -72,14 +78,34 @@ img {
   .btn-bgcolor {
     background: linear-gradient(-107.11deg, #4300a3 0%, #6100bb 100%);
     box-shadow: 0px 1px 3px 0px #000430;
-    color: #fff;
+    color: $white;
+
+    &::after {
+      background-image: url(../assets/icon/white-arrow.svg);
+    }
+
+    &:hover{
+      color: $white;
+      width: 210px;
+      background: linear-gradient(36deg, #7536cc 0%, #a562e5 100%);
+    }
   }
 
   .btn-signup {
     margin-top: 19px;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
+    background-color: $white;
+    color: $black;
+    border: 1px solid $black;
+
+    &::after {
+      background-image: url(../assets/icon/black-arrow.svg);
+    }
+
+    &:hover{
+      color: $black;
+      width: 210px;
+      background: linear-gradient(36deg, #ffffff 0%, #eaeaea 100%);
+    }
   }
 
   button {
@@ -89,15 +115,15 @@ img {
     border: none;
     width: 199px;
     height: 46px;
+    transition: all .5s ease;
 
     &::after {
       content: " ";
-      background-image: url(../assets/icon/white-arrow.svg);
       background-size: contain;
       background-repeat: no-repeat;
       position: relative;
       padding: 0px 6px;
-      top: 3px;
+      top: 5px;
       left: 8px;
     }
   }
@@ -105,18 +131,25 @@ img {
 
 //Parent Container
 .container-main {
-  width: 100%;
+
+  main{
+    padding: 3.5rem;
+  }
+
+  section{
+    padding: 2.5rem;
+  }
 
   .bg-image {
-
+    
     //Main content and background image
-    section {
-      position: relative;
-      margin: 3rem;
-      font-family: "Basis Grotesque";
+    .nav-bar {
+      margin: 2.5rem 2.5rem 0;
     }
 
     .main {
+      width: 100%;
+
       h1,
       h3 {
         color: #030343;
@@ -124,11 +157,9 @@ img {
 
       h1,
       .sub-title {
-        @include font($IBM-font, $semi-bold, 32px, 44px);
+        @include font($IBM-font, $semi-bold, 28px, 40px);
         letter-spacing: -1px;
         text-align: left;
-        margin-top: 40px;
-        width: 249px;
       }
 
       .title {
@@ -136,24 +167,21 @@ img {
       }
 
       .sub-title {
-        margin-top: 0px;
         font-size: 28px;
       }
 
       .description {
         @include font($IBM-font, $regular, 1.3rem, 0);
-        margin-top: 1.5rem;
-        width: 100%;
       }
     }
   }
 
   //Leading brands section
   .leading-brands {
+    margin-top: 5rem;
+
     h3 {
       @include font("Basis Grotesque", $regular, 16px, 0);
-      margin-top: 88px;
-      width: 238px;
       opacity: 0.67;
       color: #1d0046;
     }
@@ -184,31 +212,20 @@ img {
     flex-direction: column;
   }
 
-  .deploy-strategies {
-    margin: 4rem 2rem;
-  }
-
   //Beyond Billing
   .beyond-billing {
-    .content-container {
-      margin: 5rem 2.5rem;
-    }
-
     .content-title {
-      width: 79%;
       font-family: $SF-Pro-Boldfont;
-    }
-
-    .content-description {
-      width: 91%;
     }
   }
 
   //Testimonials
   .testimonials {
-    width: 95%;
-    margin: auto 0.8rem;
     font-family: $IBM-font;
+
+    .quote {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -220,7 +237,7 @@ img {
           @include font($IBM-font, $semi-bold, 16px, 0);
           background-color: inherit;
           border: none;
-          color: #000;
+          color: $black;
         }
 
         .active {
@@ -230,34 +247,35 @@ img {
       }
     }
 
+    .tab-content{
+      margin-top: 3rem;
+    }
+
     .testimonial-content {
       box-shadow: 0px 2px 18px -4px #7271718c;
       border-radius: 8px;
       padding: 3rem 1.5em;
-      margin-top: 3rem;
 
       .testimonial-message {
         h1 {
-          color: #5c07d1;
+          color: $secondary-active-color;
           font-weight: $semi-bold;
           letter-spacing: -1px;
-          width: 65%;
         }
+
         h2 {
           @include font($IBM-font, $regular, 1.3rem, 0);
           color: $description-font-color;
-          width: 93%;
-          margin-top: 1.5rem;
         }
-        h3 {
+
+        a {
           font-size: 1.2rem;
-          margin-top: 2rem;
         }
       }
 
       .testimonial-image {
         h3 {
-          color: #5c07d1;
+          color: $secondary-active-color;
           text-align: center;
           font-size: 1.1rem;
           padding-top: 1rem;
@@ -268,26 +286,18 @@ img {
 
   //Modern-Cfo
   .modern-cfo {
-    margin: 9rem 3rem;
-
-    .title {
-      margin-bottom: 3rem;
-
       h1 {
         @include font($IBM-font, $semi-bold, 36px, 0);
         letter-spacing: -0.64px;
       }
-    }
 
     .container {
-      width: 100%;
-
       h3 {
         @include font($IBM-font, $semi-bold, 20px, 30px);
         letter-spacing: -0.5px;
       }
 
-      h5 {
+      a {
         @include font($IBM-font, $regular, 16px, 24px);
 
         &.pricing-text {
@@ -308,31 +318,25 @@ img {
 
   .content-container {
     font-family: $IBM-font;
-    width: 89%;
 
     .content-title {
       @include font($IBM-font, $bold, 33px, 44px);
       padding-top: 9px;
-      width: 264px;
       letter-spacing: -0.64px;
     }
 
     .content-description {
       @include font($IBM-font, $regular, 16px, 24px);
       color: $description-font-color;
-      margin-top: 2rem;
-      width: 261px;
     }
   }
 }
-
 
 //For Tablet Devices
 
 @media screen and (min-width: 450px) {
   //Parent Container
   .container-main {
-    width: 100%;
 
     //Main content and background image
     .bg-image {
@@ -342,59 +346,42 @@ img {
       background-position: right;
       background-size: 92%;
 
-      .main {
-        .sub-title {
-          width: 39%;
-        }
+      .nav-bar{
+        margin: 3.5rem 5.5rem 0;
+      }
 
-        .description {
-          width: 58%;
-        }
+      .main{
+        width: 44%;
       }
     }
 
-    .content-container {
-      .content-description {
-        width: 74%;
-      }
-    }
-
-    //Deploy Strategies styles
-    .deploy-strategies {
-      margin: 30% 3rem 3rem;
-    }
 
     //Testimonials styles
     .testimonials {
-      width: 85%;
-      margin: auto;
-    }
-
-    //Modern Cfo styles
-    .modern-cfo {
-      margin: 9rem 3rem 4rem;
+      .quote {
+        display: none;
+      }
     }
   }
 }
 
-
 //For Laptop and Larger Devices
 
 @media screen and (min-width: 1024px) {
-
   a {
     padding-right: 1.8rem;
   }
 
   //Parent Container
   .container-main {
+    
+    main{
+    margin-top: 3rem;
+    }
+
     .bg-image {
       height: 139.5vh;
       background-size: 92%;
-
-      section {
-        margin: 5.3rem 6rem 0 148px;
-      }
 
       .main {
         h1,
@@ -402,31 +389,19 @@ img {
           @include font($IBM-font, $semi-bold, 48px, 54px);
           letter-spacing: -1px;
           text-align: left;
-          margin-top: 9%;
-          width: 387px;
-        }
-
-        .sub-title {
-          width: 460px;
-          margin-top: 0px;
         }
 
         .description {
           @include font($IBM-font, $regular, 18px, 27px);
-          margin-top: 34px;
-          width: 417px;
         }
       }
 
       .leading-brands {
+        margin-top: 5rem;
+
         .brand-icons {
           display: flex;
           align-items: center;
-          margin-top: 34.6px;
-
-          img {
-            margin-right: 43.11px;
-          }
 
           .goop {
             width: 64.66px;
@@ -445,8 +420,6 @@ img {
 
     //Selected tab container
     .content-container {
-      margin-left: 148px;
-
       .content-title {
         font-size: 36px;
       }
@@ -459,28 +432,25 @@ img {
     }
 
     .deploy-strategies {
-      margin: 256px 0 172px;
       overflow-x: clip;
+      margin-top: 5rem;
+
+      @media screen and (min-width: 900px) and (max-width: 1024px){
+        margin-top: 30% !important;
+      }
 
       .content-container {
         position: absolute;
         z-index: 1;
-        width: 28%;
-      }
-
-      .content-description {
-        width: 326px;
+        width: 25%;
+        margin-left: 5rem;
       }
     }
 
     //Beyond Billing styles
     .beyond-billing {
-      margin: 0 0 0 159px;
-    }
-
-    .beyond-billing {
+      margin-top: 5rem;
       .content-container {
-        margin: 0;
         width: 29%;
       }
 
@@ -497,65 +467,76 @@ img {
       }
     }
 
+    //Testimonials Section styles
+    .testimonials {
+      margin-top: 5rem;
 
-  //Testimonials Section styles
-  .testimonials {
-    margin: 153px auto;
+      .tab-content {
+        margin: auto;
+        padding-top: 4rem;
+        height: 347px;
+        width: 858px;
+      }
 
-    .tab-content {
-      height: 347px;
-      width: 858px;
-      margin: auto;
+      .quote {
+        display: block;
+        position: relative;
+        top: 6rem;
+        right: 4rem;
+        border: none;
+        width: 55px;
+        padding: 16px;
+        height: 44px;
+        color: $white;
+        background-color: $secondary-active-color;
+        text-align: center;
+        border-radius: 30px;
+      }
+
+      .testimonial-content {
+        padding: 3rem 7rem;
+
+        .testimonial-message {
+          h1 {
+            @include font($IBM-font, $bold, 32px, 1.26);
+          }
+
+          h2 {
+            @include font($IBM-font, $regular, 18px, 1.55);
+          }
+
+          a {
+            @include font($IBM-font, $semi-bold, 16px, 20px);
+            padding-top: 1rem;
+          }
+        }
+
+        .testimonial-image {
+          h3 {
+            @include font($IBM-font, $semi-bold, 16px, 20px);
+            padding-top: 1rem;
+          }
+        }
+      }
     }
 
-    .testimonial-content {
-      padding: 3rem 7rem;
-      margin: 3rem auto;
+    //Modern Cfo Section styles
+    .modern-cfo {
+      margin-top: 5rem;
 
-      .testimonial-message {
+      .title {
         h1 {
-          @include font($IBM-font, $bold, 32px, 1.26);
-          width: 65%;
-        }
-
-        h2 {
-          @include font($IBM-font, $regular, 18px, 1.55);
-          width: 523px;
-          margin-top: 1.5rem;
-        }
-
-        h3 {
-          @include font($IBM-font, $semi-bold, 16px, 20px);
-          padding-top: 1rem;
+          @include font($IBM-font, $semi-bold, 36px, 44px);
+          letter-spacing: -0.64px;
+          width: 402px;
         }
       }
 
-      .testimonial-image {
-        h3 {
-          @include font($IBM-font, $semi-bold, 16px, 20px);
-          padding-top: 1rem;
+      .container {
+        .col-sm {
+          padding-right: 52px;
         }
       }
     }
   }
-
-  //Modern Cfo Section styles
-  .modern-cfo {
-    margin: 0 164px;
-
-    .title {
-      h1 {
-        @include font($IBM-font, $semi-bold, 36px, 44px);
-        letter-spacing: -0.64px;
-        width: 402px;
-      }
-    }
-
-    .container {
-      .col-sm {
-        padding-right: 52px;
-      }
-    }
-  }
-}
 }

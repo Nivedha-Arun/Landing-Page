@@ -18,10 +18,15 @@
   src: url("../fonts/SFProText-Bold.ttf") format("truetype");
 }
 
+//base-font
+$white : #fff;
+$black : #000;
+
 //font-color
 $base-font-color: #3a008c;
 $highlight-color: #ee5f40;
 $active-color: #120ef0;
+$secondary-active-color: #5c07d1;
 $description-font-color: #64648c;
 
 //font-family

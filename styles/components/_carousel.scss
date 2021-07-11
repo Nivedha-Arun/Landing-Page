@@ -1,33 +1,23 @@
 //Carousel Styles
-
 .carousel-inner {
+  padding: 3rem;
     h2 {
       @include font($IBM-font, 500, 24px, 27px);
-      margin-left: 38px;
     }
   
     h3 {
       @include font($IBM-font, 500, 15px, 22px);
       margin-top: 18px;
-      margin-left: 38px;
-      width: 188px;
     }
   
     img {
-      width: 30%;
-      position: relative;
+      width: 80px;
       left: 63%;
-      padding-top: 2rem;
-    }
-  
-    h2,
-    span {
-      font-size: 20px;
     }
   
     span {
       color: #8150c7;
-      display: block;
+      font-size: 24px;
     }
   }
 

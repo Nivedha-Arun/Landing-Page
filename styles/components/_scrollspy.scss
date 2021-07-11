@@ -53,21 +53,18 @@
     }
 
     .selected-description {
-      width: 88%;
       padding-top: -4rem;
       margin: 3rem;
 
       .selected-title {
         @include font($IBM-font, $semi-bold, 18px, 26px);
         letter-spacing: -0.2px;
-        width: 182px;
       }
 
       .selected-subtitle {
         @include font($IBM-font, $regular, 16px, 24px);
         color: $description-font-color;
         padding-top: 15px;
-        width: 225px;
       }
 
       .pricing-text {
@@ -89,7 +86,7 @@
         }
         ul {
           li {
-            width: 10%;
+            width: 15%;
           }
         }
       }
@@ -109,9 +106,10 @@
             width: 20%;
 
             a {
-              @include font($IBM-font, $semi-bold, 16px, 0);
+              @include font($IBM-font, $semi-bold, 13px, 0);
               color: #191923;
               opacity: 0.55;
+
 
               &.active {
                 color: #120ef0;
@@ -130,17 +128,11 @@
 
           .selected-image {
             margin-top: 3rem;
-            width: 536px;
           }
 
           .selected-description {
-            width: 32%;
             padding-top: -4rem;
             margin: 0rem 3rem;
-
-            .selected-title {
-              width: 148px;
-            }
 
             .pricing-text {
               @include font($SF-Pro-Mediumfont, $regular, 16px, 0);
