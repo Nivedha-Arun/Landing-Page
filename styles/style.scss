@@ -27,7 +27,7 @@ a {
     font-size: 12px;
   }
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
@@ -84,7 +84,7 @@ img {
       background-image: url(../assets/icon/white-arrow.svg);
     }
 
-    &:hover{
+    &:hover {
       color: $white;
       width: 210px;
       background: linear-gradient(36deg, #7536cc 0%, #a562e5 100%);
@@ -101,7 +101,7 @@ img {
       background-image: url(../assets/icon/black-arrow.svg);
     }
 
-    &:hover{
+    &:hover {
       color: $black;
       width: 210px;
       background: linear-gradient(36deg, #ffffff 0%, #eaeaea 100%);
@@ -115,7 +115,7 @@ img {
     border: none;
     width: 199px;
     height: 46px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     &::after {
       content: " ";
@@ -131,17 +131,15 @@ img {
 
 //Parent Container
 .container-main {
-
-  main{
+  main {
     padding: 3.5rem;
   }
 
-  section{
+  section {
     padding: 2.5rem;
   }
 
   .bg-image {
-    
     //Main content and background image
     .nav-bar {
       margin: 2.5rem 2.5rem 0;
@@ -247,7 +245,7 @@ img {
       }
     }
 
-    .tab-content{
+    .tab-content {
       margin-top: 3rem;
     }
 
@@ -286,10 +284,10 @@ img {
 
   //Modern-Cfo
   .modern-cfo {
-      h1 {
-        @include font($IBM-font, $semi-bold, 36px, 0);
-        letter-spacing: -0.64px;
-      }
+    h1 {
+      @include font($IBM-font, $semi-bold, 36px, 0);
+      letter-spacing: -0.64px;
+    }
 
     .container {
       h3 {
@@ -298,20 +296,26 @@ img {
       }
 
       a {
-        @include font($IBM-font, $regular, 16px, 24px);
+        @include font($IBM-font, $regular, 13px, 24px);
 
         &.pricing-text {
           font-weight: $semi-bold;
         }
       }
 
-      .col-sm::before {
-        content: "\f058";
-        font-family: FontAwesome;
-        position: relative;
-        top: 28px;
-        font-size: 17px;
-        left: -1.9rem;
+      .col-sm {
+        h5 {
+          font-weight: 400;
+        }
+
+        &::before {
+          content: "\f058";
+          font-family: FontAwesome;
+          position: relative;
+          top: 28px;
+          font-size: 17px;
+          left: -1.9rem;
+        }
       }
     }
   }
@@ -337,7 +341,6 @@ img {
 @media screen and (min-width: 450px) {
   //Parent Container
   .container-main {
-
     //Main content and background image
     .bg-image {
       height: 135vh;
@@ -346,15 +349,14 @@ img {
       background-position: right;
       background-size: 92%;
 
-      .nav-bar{
+      .nav-bar {
         margin: 3.5rem 5.5rem 0;
       }
 
-      .main{
+      .main {
         width: 44%;
       }
     }
-
 
     //Testimonials styles
     .testimonials {
@@ -374,9 +376,12 @@ img {
 
   //Parent Container
   .container-main {
-    
-    main{
-    margin-top: 3rem;
+    main {
+      margin-top: 3rem;
+    }
+
+    .container-fluid{
+        padding: 2.5rem 0 2.5rem 2.5rem;
     }
 
     .bg-image {
@@ -435,7 +440,7 @@ img {
       overflow-x: clip;
       margin-top: 5rem;
 
-      @media screen and (min-width: 900px) and (max-width: 1024px){
+      @media screen and (min-width: 900px) and (max-width: 1024px) {
         margin-top: 30% !important;
       }
 

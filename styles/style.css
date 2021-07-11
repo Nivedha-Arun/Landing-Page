@@ -615,8 +615,8 @@ img {
   border: none;
   width: 199px;
   height: 46px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .main-buttons button::after {
@@ -807,12 +807,16 @@ img {
 .container-main .modern-cfo .container a {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 24px;
 }
 
 .container-main .modern-cfo .container a.pricing-text {
   font-weight: 600;
+}
+
+.container-main .modern-cfo .container .col-sm h5 {
+  font-weight: 400;
 }
 
 .container-main .modern-cfo .container .col-sm::before {
@@ -870,6 +874,9 @@ img {
   }
   .container-main main {
     margin-top: 3rem;
+  }
+  .container-main .container-fluid {
+    padding: 2.5rem 0 2.5rem 2.5rem;
   }
   .container-main .bg-image {
     height: 139.5vh;
