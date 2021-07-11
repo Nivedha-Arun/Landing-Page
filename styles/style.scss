@@ -73,7 +73,7 @@ img {
 }
 
 .main-buttons {
-  margin-top: 2rem;
+  margin-top: 34px;
 
   .btn-bgcolor {
     background: linear-gradient(-107.11deg, #4300a3 0%, #6100bb 100%);
@@ -92,10 +92,10 @@ img {
   }
 
   .btn-signup {
-    margin-top: 19px;
     background-color: $white;
     color: $black;
     border: 1px solid $black;
+    margin-top: 19px;
 
     &::after {
       background-image: url(../assets/icon/black-arrow.svg);
@@ -291,7 +291,7 @@ img {
 
     .container {
       h3 {
-        @include font($IBM-font, $semi-bold, 20px, 30px);
+        @include font($IBM-font, $bold, 20px, 30px);
         letter-spacing: -0.5px;
       }
 
@@ -303,9 +303,16 @@ img {
         }
       }
 
+      .row {
+        margin-top: 42px;
+      }
+
+      .col-sm,
       .col-sm {
         h5 {
+          font-family: $IBM-font;
           font-weight: 400;
+          margin-bottom: 10px;
         }
 
         &::before {
@@ -380,13 +387,17 @@ img {
       margin-top: 3rem;
     }
 
-    section.container-fluid{
-        padding: 2.5rem 0 2.5rem 2.5rem;
+    section.container-fluid {
+      padding: 2.5rem 0 2.5rem 2.5rem;
     }
 
     .bg-image {
       height: 139.5vh;
       background-size: 92%;
+
+      .nav-bar {
+        margin: 2.8rem 5.5rem 0;
+      }
 
       .main {
         h1,
@@ -396,14 +407,18 @@ img {
           text-align: left;
         }
 
+        .title {
+          padding-right: 43px;
+        }
+
         .description {
           @include font($IBM-font, $regular, 18px, 27px);
-          margin-top: 3rem;
+          margin-top: 34px;
         }
       }
 
       .leading-brands {
-        margin-top: 5rem;
+        margin-top: 104px;
 
         .brand-icons {
           display: flex;
@@ -429,6 +444,10 @@ img {
       .content-title {
         font-size: 36px;
       }
+
+      .content-description {
+        margin-top: 35px;
+      }
     }
 
     //Deploy Strategy styles
@@ -439,16 +458,16 @@ img {
 
     .deploy-strategies {
       overflow-x: clip;
-      margin-top: 5rem;
+      margin-top: 255.5px;
 
       @media screen and (min-width: 900px) and (max-width: 1024px) {
-        margin-top: 30% !important;
+        margin-top: 44% !important;
       }
 
       .content-container {
         position: absolute;
         z-index: 1;
-        width: 25%;
+        width: 24.5%;
         margin-left: 5rem;
       }
     }
@@ -475,7 +494,7 @@ img {
 
     //Testimonials Section styles
     .testimonials {
-      margin-top: 5rem;
+      margin-top: 7rem;
 
       .tab-content {
         margin: auto;
@@ -487,12 +506,12 @@ img {
       .quote {
         display: block;
         position: relative;
-        top: 6rem;
-        right: 4rem;
+        top: 12rem;
+        right: -1rem;
         border: none;
-        width: 55px;
-        padding: 16px;
-        height: 44px;
+        width: 35px;
+        padding: 12px;
+        height: 35px;
         color: $white;
         background-color: $secondary-active-color;
         text-align: center;
@@ -500,24 +519,38 @@ img {
       }
 
       .testimonial-content {
-        padding: 3rem 7rem;
+        height: 347px;
+        width: 858px;
 
         .testimonial-message {
+          padding-left: 30px;
+          width: 100%;
+          margin-right: 30px;
+          padding-top: 24px;
+
           h1 {
             @include font($IBM-font, $bold, 32px, 1.26);
+            padding-right: 10%;
           }
 
           h2 {
             @include font($IBM-font, $regular, 18px, 1.55);
+            margin-top: 23px;
           }
 
           a {
             @include font($IBM-font, $semi-bold, 16px, 20px);
-            padding-top: 1rem;
+            padding-top: 26px;
           }
         }
 
         .testimonial-image {
+          padding: 38px 38px 38px 0;
+          img {
+            width: 75%;
+            margin: auto;
+          }
+
           h3 {
             @include font($IBM-font, $semi-bold, 16px, 20px);
             padding-top: 1rem;
@@ -528,19 +561,25 @@ img {
 
     //Modern Cfo Section styles
     .modern-cfo {
-      margin-top: 5rem;
+      margin-top: 180px;
+      margin-left: 3rem;
 
       .title {
+        width: 402px;
+
+        .container {
+          margin-left: -8px;
+        }
         h1 {
           @include font($IBM-font, $semi-bold, 36px, 44px);
           letter-spacing: -0.64px;
-          width: 402px;
         }
       }
 
       .container {
+        .col-sm,
         .col-sm {
-          padding-right: 52px;
+          margin-right: 52px;
         }
       }
     }

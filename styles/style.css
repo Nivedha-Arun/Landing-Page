@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Basis Grotesque";
   src: url("../fonts/Basis Grotesque Medium.ttf") format("truetype");
@@ -27,14 +26,14 @@ footer {
 footer .footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
 }
 
@@ -56,8 +55,8 @@ footer .footer h1 {
 footer .footer .main-buttons {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 450px) {
@@ -68,25 +67,25 @@ footer .footer .main-buttons {
   footer .footer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   footer .footer .main-buttons {
     margin: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
-  footer .footer .main-buttons .btn-bgcolor {
-    margin-top: 19px;
+  footer .footer .main-buttons .btn-signup {
+    margin-top: 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
   footer {
     height: 261px;
-    margin-top: 6rem;
+    margin-top: 110px;
   }
   footer .footer {
     margin-left: 6rem;
@@ -101,8 +100,11 @@ footer .footer .main-buttons {
   footer .footer .main-buttons {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
   }
 }
 
@@ -136,8 +138,8 @@ footer .footer .main-buttons {
     padding: 0px;
     width: 100%;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     position: relative;
     background-color: initial;
     z-index: 0;
@@ -148,13 +150,13 @@ footer .footer .main-buttons {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 157px 1fr;
-      grid-template-columns: 157px 1fr;
+  grid-template-columns: 157px 1fr;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .nav-bar .logo {
@@ -169,8 +171,9 @@ footer .footer .main-buttons {
 
 @media screen and (min-width: 1024px) {
   .nav-bar .logo {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     width: 65%;
+    margin-left: 2rem;
   }
 }
 
@@ -178,19 +181,26 @@ footer .footer .main-buttons {
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  place-items: left;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
   padding-top: 2rem;
 }
 
 .nav-bar .nav-buttons .schedule {
   color: #3a008c;
   padding-top: 13px;
+  margin-right: 20px;
 }
 
 .nav-bar .nav-buttons .schedule::after {
-  content: " →";
+  content: " ";
+  background-image: url("/chargebee-assignment/assets/icon/purple-arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0px 6px;
+  top: 5px;
+  left: 8px;
 }
 
 .nav-bar .nav-buttons .log-in {
@@ -204,20 +214,27 @@ footer .footer .main-buttons {
 }
 
 .nav-bar .nav-buttons .log-in::after {
-  content: " →";
+  content: " ";
+  background-image: url("/chargebee-assignment/assets/icon/white-arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0px 5px;
+  top: 4px;
+  left: 6px;
 }
 
 @media screen and (min-width: 1024px) {
   .nav-bar .nav-buttons {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     padding-top: 0;
     padding-right: 3.3rem;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
   .nav-bar .nav-buttons .schedule {
     padding-top: 7px;
@@ -225,13 +242,14 @@ footer .footer .main-buttons {
   .nav-bar .nav-buttons .schedule,
   .nav-bar .nav-buttons .log-in {
     font-size: 14px;
+    font-weight: 500;
   }
 }
 
 .middle {
   background-color: #fff;
   -webkit-box-shadow: 2px 4px 83px #e3e3e3;
-          box-shadow: 2px 4px 83px #e3e3e3;
+  box-shadow: 2px 4px 83px #e3e3e3;
   font-family: "IBM Plex Sans", sans-serif;
   z-index: 5;
   width: 95%;
@@ -261,7 +279,7 @@ footer .footer .main-buttons {
     margin-left: 11rem;
     margin-top: 3rem;
     z-index: 0;
-    height: 91vh;
+    height: 89vh;
     background-image: url(../assets/sb-section-console.svg);
     background-repeat: no-repeat;
     background-size: 70%;
@@ -269,26 +287,26 @@ footer .footer .main-buttons {
   }
   .slider .left,
   .slider .right {
-    border-bottom: 309px solid #fff;
-    border-left: 45px solid transparent;
-    border-right: 50px solid transparent;
+    border-bottom: 294px solid #fff;
+    border-left: 54px solid transparent;
+    border-right: 54px solid transparent;
     -webkit-filter: drop-shadow(5px -72px 62px #e3e3e399);
-            filter: drop-shadow(5px -72px 62px #e3e3e399);
+    filter: drop-shadow(5px -72px 62px #e3e3e399);
     height: 0;
-    width: 448px;
+    width: 474px;
   }
   .slider .left {
     -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   .slider .right {
     -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    transform: rotate(-90deg);
   }
   .slider .middle {
     width: 281px;
     height: 366px;
-    margin: -40px 0;
+    margin: -42px -37px;
   }
 }
 
@@ -303,7 +321,7 @@ footer .footer .main-buttons {
   position: sticky;
   top: -1rem;
   -webkit-backdrop-filter: grayscale(1) blur(8px);
-          backdrop-filter: grayscale(1) blur(8px);
+  backdrop-filter: grayscale(1) blur(8px);
 }
 
 .content-tabs ul {
@@ -311,8 +329,8 @@ footer .footer .main-buttons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   text-align: left;
   width: 98%;
   border-bottom: 2px solid #d6d5d5;
@@ -347,11 +365,11 @@ footer .footer .main-buttons {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .content-tabs .selected-content .selected-image {
@@ -390,13 +408,14 @@ footer .footer .main-buttons {
 
 @media screen and (min-width: 450px) {
   .content-tabs .content-nav {
-    width: 100%;
+    width: 94%;
+    margin: auto;
   }
   .content-tabs .selected-content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   .content-tabs ul li {
     width: 15%;
@@ -423,6 +442,7 @@ footer .footer .main-buttons {
     opacity: 0.55;
   }
   .content-tabs ul li a.active {
+    padding-bottom: 16px;
     color: #120ef0;
     border-bottom: 2px solid;
     opacity: 100%;
@@ -434,15 +454,18 @@ footer .footer .main-buttons {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .content-tabs .selected-content .selected-image {
     margin-top: 3rem;
     width: 179%;
+  }
+  .content-tabs .selected-content .selected-title {
+    padding-right: 4rem;
   }
   .content-tabs .selected-content .selected-description {
     padding-top: -4rem;
@@ -474,6 +497,7 @@ footer .footer .main-buttons {
   font-size: 15px;
   line-height: 22px;
   margin-top: 18px;
+  margin-bottom: 19px;
 }
 
 .carousel-inner img {
@@ -491,24 +515,24 @@ footer .footer .main-buttons {
   .carousel-control-prev-icon {
     position: relative;
     -webkit-box-shadow: 0px 1px 4px 0px #000000;
-            box-shadow: 0px 1px 4px 0px #000000;
+    box-shadow: 0px 1px 4px 0px #000000;
     background-size: 48%;
     padding: 24px;
     border-radius: 30px;
   }
   .carousel-control-next-icon {
-    right: -12rem;
+    right: -10rem;
     background-image: url(../assets/icon/next_icon.svg);
   }
   .carousel-control-prev-icon {
-    left: -12rem;
+    left: -10rem;
     background-image: url(../assets/icon/previous_icon.svg);
   }
 }
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   font-size: 12px;
 }
@@ -546,7 +570,7 @@ img {
   width: 39px;
   margin-right: 12px;
   -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
+  transform: translateY(0rem);
 }
 
 .pricing-text {
@@ -561,7 +585,7 @@ img {
   background-image: url(../assets/icon/color-arrow.svg);
   background-size: contain;
   -webkit-transform: rotateZ(-45deg) translateY(4px);
-          transform: rotateZ(-45deg) translateY(4px);
+  transform: rotateZ(-45deg) translateY(4px);
   background-position: center;
   background-repeat: no-repeat;
   top: -2px;
@@ -570,13 +594,13 @@ img {
 }
 
 .main-buttons {
-  margin-top: 2rem;
+  margin-top: 34px;
 }
 
 .main-buttons .btn-bgcolor {
   background: linear-gradient(-107.11deg, #4300a3 0%, #6100bb 100%);
   -webkit-box-shadow: 0px 1px 3px 0px #000430;
-          box-shadow: 0px 1px 3px 0px #000430;
+  box-shadow: 0px 1px 3px 0px #000430;
   color: #fff;
 }
 
@@ -591,10 +615,10 @@ img {
 }
 
 .main-buttons .btn-signup {
-  margin-top: 19px;
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
+  margin-top: 19px;
 }
 
 .main-buttons .btn-signup::after {
@@ -689,8 +713,8 @@ img {
 
 .container-main .leading-brands .brand-icons {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
@@ -714,8 +738,8 @@ img {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .container-main .beyond-billing .content-title {
@@ -761,7 +785,7 @@ img {
 
 .container-main .testimonials .testimonial-content {
   -webkit-box-shadow: 0px 2px 18px -4px #7271718c;
-          box-shadow: 0px 2px 18px -4px #7271718c;
+  box-shadow: 0px 2px 18px -4px #7271718c;
   border-radius: 8px;
   padding: 3rem 1.5em;
 }
@@ -799,7 +823,7 @@ img {
 
 .container-main .modern-cfo .container h3 {
   font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 20px;
   line-height: 30px;
   letter-spacing: -0.5px;
@@ -816,10 +840,18 @@ img {
   font-weight: 600;
 }
 
-.container-main .modern-cfo .container .col-sm h5 {
-  font-weight: 400;
+.container-main .modern-cfo .container .row {
+  margin-top: 42px;
 }
 
+.container-main .modern-cfo .container .col-sm h5,
+.container-main .modern-cfo .container .col-sm h5 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.container-main .modern-cfo .container .col-sm::before,
 .container-main .modern-cfo .container .col-sm::before {
   content: "\f058";
   font-family: FontAwesome;
@@ -883,6 +915,9 @@ img {
     height: 139.5vh;
     background-size: 92%;
   }
+  .container-main .bg-image .nav-bar {
+    margin: 2.8rem 5.5rem 0;
+  }
   .container-main .bg-image .main h1,
   .container-main .bg-image .main .sub-title {
     font-family: "IBM Plex Sans", sans-serif;
@@ -892,23 +927,26 @@ img {
     letter-spacing: -1px;
     text-align: left;
   }
+  .container-main .bg-image .main .title {
+    padding-right: 43px;
+  }
   .container-main .bg-image .main .description {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-    margin-top: 3rem;
+    margin-top: 34px;
   }
   .container-main .bg-image .leading-brands {
-    margin-top: 5rem;
+    margin-top: 104px;
   }
   .container-main .bg-image .leading-brands .brand-icons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .container-main .bg-image .leading-brands .brand-icons .goop {
     width: 64.66px;
@@ -922,22 +960,25 @@ img {
   .container-main .content-container .content-title {
     font-size: 36px;
   }
+  .container-main .content-container .content-description {
+    margin-top: 35px;
+  }
   .container-main .deploy-strategies,
   .container-main .beyond-billing {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   .container-main .deploy-strategies {
     overflow-x: clip;
-    margin-top: 5rem;
+    margin-top: 255.5px;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 900px) and (max-width: 1024px) {
   .container-main .deploy-strategies {
-    margin-top: 30% !important;
+    margin-top: 44% !important;
   }
 }
 
@@ -945,7 +986,7 @@ img {
   .container-main .deploy-strategies .content-container {
     position: absolute;
     z-index: 1;
-    width: 25%;
+    width: 24.5%;
     margin-left: 5rem;
   }
   .container-main .beyond-billing {
@@ -968,7 +1009,7 @@ img {
     width: 256px;
   }
   .container-main .testimonials {
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
   .container-main .testimonials .tab-content {
     margin: auto;
@@ -979,38 +1020,54 @@ img {
   .container-main .testimonials .quote {
     display: block;
     position: relative;
-    top: 6rem;
-    right: 4rem;
+    top: 12rem;
+    right: -1rem;
     border: none;
-    width: 55px;
-    padding: 16px;
-    height: 44px;
+    width: 35px;
+    padding: 12px;
+    height: 35px;
     color: #fff;
     background-color: #5c07d1;
     text-align: center;
     border-radius: 30px;
   }
   .container-main .testimonials .testimonial-content {
-    padding: 3rem 7rem;
+    height: 347px;
+    width: 858px;
+  }
+  .container-main .testimonials .testimonial-content .testimonial-message {
+    padding-left: 30px;
+    width: 100%;
+    margin-right: 30px;
+    padding-top: 24px;
   }
   .container-main .testimonials .testimonial-content .testimonial-message h1 {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 800;
     font-size: 32px;
     line-height: 1.26;
+    padding-right: 10%;
   }
   .container-main .testimonials .testimonial-content .testimonial-message h2 {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
+    margin-top: 23px;
   }
   .container-main .testimonials .testimonial-content .testimonial-message a {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    padding-top: 1rem;
+    padding-top: 26px;
+  }
+  .container-main .testimonials .testimonial-content .testimonial-image {
+    padding: 38px 38px 38px 0;
+  }
+  .container-main .testimonials .testimonial-content .testimonial-image img {
+    width: 75%;
+    margin: auto;
   }
   .container-main .testimonials .testimonial-content .testimonial-image h3 {
     font-family: "IBM Plex Sans", sans-serif;
@@ -1020,7 +1077,14 @@ img {
     padding-top: 1rem;
   }
   .container-main .modern-cfo {
-    margin-top: 5rem;
+    margin-top: 180px;
+    margin-left: 3rem;
+  }
+  .container-main .modern-cfo .title {
+    width: 402px;
+  }
+  .container-main .modern-cfo .title .container {
+    margin-left: -8px;
   }
   .container-main .modern-cfo .title h1 {
     font-family: "IBM Plex Sans", sans-serif;
@@ -1028,10 +1092,10 @@ img {
     font-size: 36px;
     line-height: 44px;
     letter-spacing: -0.64px;
-    width: 402px;
   }
+  .container-main .modern-cfo .container .col-sm,
   .container-main .modern-cfo .container .col-sm {
-    padding-right: 52px;
+    margin-right: 52px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -76,72 +76,75 @@
 }
 
 @media screen and (min-width: 450px) {
-    .content-tabs {
-        .content-nav {
-          width: 100%;
-        }
+  .content-tabs {
+    .content-nav {
+      width: 94%;
+      margin: auto;
+    }
 
-        .selected-content {
-          flex-direction: row;
-        }
-        ul {
-          li {
-            width: 15%;
+    .selected-content {
+      flex-direction: row;
+    }
+    ul {
+      li {
+        width: 15%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content-tabs {
+    margin: 1.5rem 0 0 3rem;
+    width: 67%;
+
+    ul {
+      width: 100%;
+
+      li {
+        padding: 9px 0px 0px 0px;
+        width: 20%;
+
+        a {
+          @include font($IBM-font, $semi-bold, 13px, 0);
+          color: #191923;
+          opacity: 0.55;
+
+          &.active {
+            padding-bottom: 16px;
+            color: #120ef0;
+            border-bottom: 2px solid;
+            opacity: 100%;
           }
         }
       }
     }
 
-@media screen and (min-width: 1024px) {
+    .selected-content {
+      margin-left: -3.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-    .content-tabs {
-        margin: 1.5rem 0 0 3rem;
-        width: 67%;
+      .selected-image {
+        margin-top: 3rem;
+        width: 179%;
+      }
 
-        ul {
-          width: 100%;
+      .selected-title {
+        padding-right: 4rem;
+      }
 
-          li {
-            padding: 9px 0px 0px 0px;
-            width: 20%;
+      .selected-description {
+        padding-top: -4rem;
+        margin: 0rem 3rem;
 
-            a {
-              @include font($IBM-font, $semi-bold, 13px, 0);
-              color: #191923;
-              opacity: 0.55;
-
-
-              &.active {
-                color: #120ef0;
-                border-bottom: 2px solid;
-                opacity: 100%;
-              }
-            }
-          }
+        .pricing-text {
+          @include font($SF-Pro-Mediumfont, $regular, 16px, 0);
+          margin-top: 2rem;
+          letter-spacing: -0.6px;
         }
-
-        .selected-content {
-          margin-left: -3.5rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-
-          .selected-image {
-            margin-top: 3rem;
-            width: 179%;
-
-          }
-
-          .selected-description {
-            padding-top: -4rem;
-            margin: 0rem 3rem;
-
-            .pricing-text {
-              @include font($SF-Pro-Mediumfont, $regular, 16px, 0);
-              margin-top: 2rem;
-              letter-spacing: -0.6px;
-            }
-          }
-        }
+      }
     }
+  }
 }
